@@ -76,6 +76,12 @@
 
         if (userVerification !== 'not specified') publicKey.userVerification = userVerification;
 
+        if (window.PublicKeyCredential === undefined || typeof window.PublicKeyCredential !== "function") {
+            $("#error").val("WebAuthn is not supported by this Browser");
+            $("#webauth").submit();
+            return;
+        }
+
         navigator.credentials.get({publicKey})
             .then((result) => {
                 window.result = result;

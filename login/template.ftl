@@ -41,6 +41,12 @@
     <div id="kc-header" class="${properties.kcHeaderClass!}">
       <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
     </div>
+    <div class="kc-content-wrapper" style="max-width: 840px; display: flex; margin-left: auto; margin-right: auto;">
+      <div class="alert alert-warning">
+        <span class="pficon pficon-warning-triangle-o"></span>
+        <span class="kc-feedback-text">Alle Chaos.Jetzt-Dienste werden auf dieses SSO umgestellt. Wenn du beim anmelden bai Matrix hierher weitergeleitet wurdest, musst du hier deinen Account verknüpfen. Mehr Infos unter <a href="https://wiki.chaos.jetzt/arbeitsgruppenaktiv/infrastruktur/sso-umstellung">wiki.chaos.jetzt/arbeitsgruppenaktiv/infrastruktur/sso-umstellung</a></span>
+      </div>
+    </div>
     <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
       <header class="${properties.kcFormHeaderClass!}">
         <#if realm.internationalizationEnabled  && locale.supported?size gt 1>

@@ -72,6 +72,18 @@
             </div>
             </#if>
 
+            <#if captchaRequired??>
+            <div class="form-group">
+               <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="captcha-reponse" class="${properties.kcLabelClass!}">${captchaQuestion}</label>
+                </div>
+
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="captcha-response" class="${properties.kcInputClass!}" name="captcha-response" />
+                </div>
+            </div>
+            </#if>
+
             <div class="${properties.kcFormGroupClass!}">
                 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                     <div class="${properties.kcFormOptionsWrapperClass!}">
